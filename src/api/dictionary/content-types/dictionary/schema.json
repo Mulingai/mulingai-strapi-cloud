@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dictionaries",
+  "info": {
+    "singularName": "dictionary",
+    "pluralName": "dictionaries",
+    "displayName": "Dictionary",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "namespace": {
+      "type": "string"
+    },
+    "key": {
+      "type": "string"
+    },
+    "value": {
+      "type": "text"
+    }
+  }
+}

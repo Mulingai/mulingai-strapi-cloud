@@ -2,9 +2,10 @@
   "kind": "collectionType",
   "collectionName": "pages",
   "info": {
-    "singularName": "slug",
+    "singularName": "page",
     "pluralName": "pages",
-    "displayName": "Page"
+    "displayName": "Page",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,8 +16,13 @@
     }
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
     }
   }
 }
