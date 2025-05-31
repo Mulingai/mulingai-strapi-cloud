@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_content_layout_content_rows",
+  "info": {
+    "displayName": "Content Row",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "totalWidgetsPerRowOnMobile": {
+      "type": "integer",
+      "max": 2,
+      "min": 1,
+      "default": 1
+    },
+    "widgetWrapper": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content-layout.widget-wrapper",
+      "max": 4,
+      "min": 1
+    }
+  }
+}

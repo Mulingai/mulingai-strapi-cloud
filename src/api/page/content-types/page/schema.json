@@ -32,9 +32,21 @@
     "pageType": {
       "type": "enumeration",
       "enum": [
-        "HomePage"
+        "Home Page",
+        "About Us",
+        "Use Case"
       ],
       "required": true
+    },
+    "ContentRow": {
+      "type": "component",
+      "repeatable": true,
+      "component": "content-layout.content-row",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

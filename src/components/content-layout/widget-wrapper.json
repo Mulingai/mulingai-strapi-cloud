@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_content_layout_widget_wrappers",
+  "info": {
+    "displayName": "WidgetWrapper",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "widgetType": {
+      "type": "enumeration",
+      "enum": [
+        "hero"
+      ]
+    },
+    "isDisabledOnMobile": {
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabledOnTablet": {
+      "type": "boolean",
+      "default": false
+    },
+    "isDisabledOnDesktop": {
+      "type": "boolean",
+      "default": false
+    },
+    "dynamicHeroWidget": {
+      "type": "component",
+      "repeatable": false,
+      "component": "widgets.dynamic-hero"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
