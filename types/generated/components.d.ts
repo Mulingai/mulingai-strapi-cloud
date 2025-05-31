@@ -55,6 +55,22 @@ export interface ContentLayoutWidgetWrapper extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreImagePerBreakpoint extends Struct.ComponentSchema {
+  collectionName: 'components_core_image_per_breakpoints';
+  info: {
+    description: '';
+    displayName: 'Image Per Breakpoint';
+    icon: 'picture';
+  };
+  attributes: {
+    desktopImage: Schema.Attribute.Media<'images' | 'files'>;
+    imageAlt: Schema.Attribute.String;
+    mobileImage: Schema.Attribute.Media<'images' | 'files'>;
+    name: Schema.Attribute.String;
+    tabletImage: Schema.Attribute.Media<'images' | 'files'>;
+  };
+}
+
 export interface CoreLink extends Struct.ComponentSchema {
   collectionName: 'components_core_links';
   info: {
@@ -82,6 +98,7 @@ export interface WidgetsDynamicHero extends Struct.ComponentSchema {
   attributes: {
     backgroundColor: Schema.Attribute.String &
       Schema.Attribute.CustomField<'plugin::color-picker.color'>;
+    images: Schema.Attribute.Component<'core.image-per-breakpoint', false>;
     link: Schema.Attribute.Component<'core.link', false>;
     Title: Schema.Attribute.String;
   };
@@ -92,6 +109,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'content-layout.content-row': ContentLayoutContentRow;
       'content-layout.widget-wrapper': ContentLayoutWidgetWrapper;
+      'core.image-per-breakpoint': CoreImagePerBreakpoint;
       'core.link': CoreLink;
       'widgets.dynamic-hero': WidgetsDynamicHero;
     }

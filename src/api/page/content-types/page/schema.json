@@ -38,15 +38,15 @@
       ],
       "required": true
     },
-    "ContentRow": {
+    "contentRow": {
       "type": "component",
-      "repeatable": true,
-      "component": "content-layout.content-row",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "repeatable": false,
+      "component": "content-layout.content-row"
+    },
+    "secondaryContentRow": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content-layout.content-row"
     }
   }
 }
