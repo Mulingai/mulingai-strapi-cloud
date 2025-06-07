@@ -7,7 +7,7 @@
     "build": "strapi build",
     "console": "strapi console",
     "deploy": "strapi deploy",
-    "dev": "cross-env DEBUG=knex:query,strapi:reload strapi develop --no-watch-admin",
+    "dev": "./run-strapi.sh",
     "develop": "strapi develop",
     "seed:example": "node ./scripts/seed.js",
     "start": "strapi start",
