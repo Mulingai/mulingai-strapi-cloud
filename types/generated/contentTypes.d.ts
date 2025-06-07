@@ -639,7 +639,16 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
     pageType: Schema.Attribute.Enumeration<
-      ['Home Page', 'About Us', 'Use Case']
+      [
+        'Home Page',
+        'Product',
+        'Client',
+        'Pricing',
+        'Solution',
+        'Doc',
+        'About',
+        'Blog',
+      ]
     > &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;

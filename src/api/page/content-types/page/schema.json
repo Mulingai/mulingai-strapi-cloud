@@ -33,8 +33,13 @@
       "type": "enumeration",
       "enum": [
         "Home Page",
-        "About Us",
-        "Use Case"
+        "Product",
+        "Client",
+        "Pricing",
+        "Solution",
+        "Doc",
+        "About",
+        "Blog"
       ],
       "required": true
     },
