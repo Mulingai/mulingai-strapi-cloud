@@ -643,7 +643,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'HomePage',
         'UserSignUp',
         'UserSignIn',
-        'MulingstreamLogin',
+        'MulingstreamListenerLogin',
         'Product',
         'Pricing',
         'Solution',
