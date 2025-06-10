@@ -4,7 +4,8 @@
   "info": {
     "singularName": "navigation",
     "pluralName": "navigations",
-    "displayName": "Navigation"
+    "displayName": "Navigation",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,6 +18,11 @@
   "attributes": {
     "Title": {
       "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.link"
     }
   }
 }
