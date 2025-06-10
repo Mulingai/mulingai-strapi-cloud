@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_content_layout_background_covers",
+  "info": {
+    "displayName": "Background Cover"
+  },
+  "options": {},
+  "attributes": {
+    "backgroundImage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.image-per-breakpoint"
+    }
+  }
+}

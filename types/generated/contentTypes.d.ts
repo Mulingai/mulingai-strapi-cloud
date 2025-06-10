@@ -632,7 +632,11 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    contentRow: Schema.Attribute.Component<'content-layout.content-row', false>;
+    backgroundCover: Schema.Attribute.Component<
+      'content-layout.background-cover',
+      false
+    >;
+    contentRow: Schema.Attribute.Component<'content-layout.content-row', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -650,13 +654,14 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
         'Doc',
         'About',
         'Blog',
+        'NotFound',
       ]
     > &
       Schema.Attribute.Required;
     publishedAt: Schema.Attribute.DateTime;
     secondaryContentRow: Schema.Attribute.Component<
       'content-layout.content-row',
-      false
+      true
     >;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
     title: Schema.Attribute.String &

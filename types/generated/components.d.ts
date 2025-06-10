@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface ContentLayoutBackgroundCover extends Struct.ComponentSchema {
+  collectionName: 'components_content_layout_background_covers';
+  info: {
+    displayName: 'Background Cover';
+  };
+  attributes: {
+    backgroundImage: Schema.Attribute.Component<
+      'core.image-per-breakpoint',
+      false
+    >;
+  };
+}
+
 export interface ContentLayoutContentRow extends Struct.ComponentSchema {
   collectionName: 'components_content_layout_content_rows';
   info: {
@@ -107,6 +120,7 @@ export interface WidgetsDynamicHero extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'content-layout.background-cover': ContentLayoutBackgroundCover;
       'content-layout.content-row': ContentLayoutContentRow;
       'content-layout.widget-wrapper': ContentLayoutWidgetWrapper;
       'core.image-per-breakpoint': CoreImagePerBreakpoint;

@@ -41,19 +41,25 @@
         "Solution",
         "Doc",
         "About",
-        "Blog"
+        "Blog",
+        "NotFound"
       ],
       "required": true
     },
     "contentRow": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "content-layout.content-row"
     },
     "secondaryContentRow": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "content-layout.content-row"
+    },
+    "backgroundCover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content-layout.background-cover"
     }
   }
 }
