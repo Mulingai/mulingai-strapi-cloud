@@ -640,9 +640,11 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
     pageType: Schema.Attribute.Enumeration<
       [
-        'Home Page',
+        'HomePage',
+        'UserSignUp',
+        'UserSignIn',
+        'MulingstreamLogin',
         'Product',
-        'Client',
         'Pricing',
         'Solution',
         'Doc',

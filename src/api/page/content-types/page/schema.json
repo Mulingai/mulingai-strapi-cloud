@@ -32,9 +32,11 @@
     "pageType": {
       "type": "enumeration",
       "enum": [
-        "Home Page",
+        "HomePage",
+        "UserSignUp",
+        "UserSignIn",
+        "MulingstreamLogin",
         "Product",
-        "Client",
         "Pricing",
         "Solution",
         "Doc",
