@@ -603,13 +603,14 @@ export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    externalUrls: Schema.Attribute.DynamicZone<['core.links-external']>;
+    internalUrls: Schema.Attribute.DynamicZone<['core.links-internal']>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::navigation.navigation'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    Title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
