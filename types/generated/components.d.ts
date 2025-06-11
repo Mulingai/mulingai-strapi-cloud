@@ -68,6 +68,19 @@ export interface ContentLayoutWidgetWrapper extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreExternalLink extends Struct.ComponentSchema {
+  collectionName: 'components_core_external_links';
+  info: {
+    displayName: 'External Link';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    shouldOpenInNewTab: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<true>;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface CoreImagePerBreakpoint extends Struct.ComponentSchema {
   collectionName: 'components_core_image_per_breakpoints';
   info: {
@@ -84,6 +97,19 @@ export interface CoreImagePerBreakpoint extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreInternalLink extends Struct.ComponentSchema {
+  collectionName: 'components_core_internal_links';
+  info: {
+    displayName: 'Internal Link';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    page: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
+    shouldOpenInNewTab: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+  };
+}
+
 export interface CoreLink extends Struct.ComponentSchema {
   collectionName: 'components_core_links';
   info: {
@@ -92,12 +118,18 @@ export interface CoreLink extends Struct.ComponentSchema {
     icon: 'link';
   };
   attributes: {
-    isExternal: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    label: Schema.Attribute.String;
-    page: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
-    shouldOpenInNewTab: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
-    url: Schema.Attribute.String;
+    externalLink: Schema.Attribute.Component<'core.external-link', false>;
+    internalLink: Schema.Attribute.Component<'core.internal-link', false>;
+  };
+}
+
+export interface SingleTypesLinks extends Struct.ComponentSchema {
+  collectionName: 'components_single_types_links';
+  info: {
+    displayName: 'links';
+  };
+  attributes: {
+    link: Schema.Attribute.Component<'core.link', true>;
   };
 }
 
@@ -123,8 +155,11 @@ declare module '@strapi/strapi' {
       'content-layout.background-cover': ContentLayoutBackgroundCover;
       'content-layout.content-row': ContentLayoutContentRow;
       'content-layout.widget-wrapper': ContentLayoutWidgetWrapper;
+      'core.external-link': CoreExternalLink;
       'core.image-per-breakpoint': CoreImagePerBreakpoint;
+      'core.internal-link': CoreInternalLink;
       'core.link': CoreLink;
+      'single-types.links': SingleTypesLinks;
       'widgets.dynamic-hero': WidgetsDynamicHero;
     }
   }

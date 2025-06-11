@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_core_internal_links",
+  "info": {
+    "displayName": "Internal Link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "shouldOpenInNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "page": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::page.page"
+    }
+  }
+}

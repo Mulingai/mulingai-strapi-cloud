@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_core_external_links",
+  "info": {
+    "displayName": "External Link"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "shouldOpenInNewTab": {
+      "type": "boolean",
+      "default": true
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

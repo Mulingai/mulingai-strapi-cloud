@@ -7,25 +7,15 @@
   },
   "options": {},
   "attributes": {
-    "label": {
-      "type": "string"
+    "internalLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.internal-link"
     },
-    "shouldOpenInNewTab": {
-      "type": "boolean",
-      "default": false
-    },
-    "isExternal": {
-      "type": "boolean",
-      "default": false
-    },
-    "page": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::page.page"
-    },
-    "url": {
-      "type": "string",
-      "regex": "https?://"
+    "externalLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.external-link"
     }
   }
 }
