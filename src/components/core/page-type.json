@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_core_page_types",
+  "info": {
+    "displayName": "Page Type"
+  },
+  "options": {},
+  "attributes": {
+    "pageType": {
+      "type": "enumeration",
+      "enum": [
+        "HomePage",
+        "UserSignIn",
+        "UserSignUp",
+        "MulingstreamListenerLogin"
+      ]
+    }
+  }
+}

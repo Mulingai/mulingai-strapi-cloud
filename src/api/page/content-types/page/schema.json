@@ -29,23 +29,6 @@
       "type": "uid",
       "required": true
     },
-    "pageType": {
-      "type": "enumeration",
-      "enum": [
-        "HomePage",
-        "UserSignUp",
-        "UserSignIn",
-        "MulingstreamListenerLogin",
-        "Product",
-        "Pricing",
-        "Solution",
-        "Doc",
-        "About",
-        "Blog",
-        "NotFound"
-      ],
-      "required": true
-    },
     "contentRow": {
       "type": "component",
       "repeatable": true,
@@ -60,6 +43,11 @@
       "type": "component",
       "repeatable": false,
       "component": "content-layout.background-cover"
+    },
+    "pageType": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.page-type"
     }
   }
 }

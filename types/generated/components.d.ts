@@ -105,7 +105,6 @@ export interface CoreInternalLink extends Struct.ComponentSchema {
   };
   attributes: {
     isNewTab: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    label: Schema.Attribute.String;
     page: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
   };
 }
@@ -144,6 +143,18 @@ export interface CoreLinksInternal extends Struct.ComponentSchema {
   };
 }
 
+export interface CorePageType extends Struct.ComponentSchema {
+  collectionName: 'components_core_page_types';
+  info: {
+    displayName: 'Page Type';
+  };
+  attributes: {
+    pageType: Schema.Attribute.Enumeration<
+      ['HomePage', 'UserSignIn', 'UserSignUp', 'MulingstreamListenerLogin']
+    >;
+  };
+}
+
 export interface WidgetsDynamicHero extends Struct.ComponentSchema {
   collectionName: 'components_widgets_dynamic_heroes';
   info: {
@@ -172,6 +183,7 @@ declare module '@strapi/strapi' {
       'core.link': CoreLink;
       'core.links-external': CoreLinksExternal;
       'core.links-internal': CoreLinksInternal;
+      'core.page-type': CorePageType;
       'widgets.dynamic-hero': WidgetsDynamicHero;
     }
   }

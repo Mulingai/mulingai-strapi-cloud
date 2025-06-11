@@ -586,22 +586,7 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'>;
-    pageType: Schema.Attribute.Enumeration<
-      [
-        'HomePage',
-        'UserSignUp',
-        'UserSignIn',
-        'MulingstreamListenerLogin',
-        'Product',
-        'Pricing',
-        'Solution',
-        'Doc',
-        'About',
-        'Blog',
-        'NotFound',
-      ]
-    > &
-      Schema.Attribute.Required;
+    pageType: Schema.Attribute.Component<'core.page-type', false>;
     publishedAt: Schema.Attribute.DateTime;
     secondaryContentRow: Schema.Attribute.Component<
       'content-layout.content-row',
