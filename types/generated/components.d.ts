@@ -123,13 +123,24 @@ export interface CoreLink extends Struct.ComponentSchema {
   };
 }
 
-export interface SingleTypesLinks extends Struct.ComponentSchema {
-  collectionName: 'components_single_types_links';
+export interface CoreLinksExternal extends Struct.ComponentSchema {
+  collectionName: 'components_core_links_external_s';
   info: {
-    displayName: 'links';
+    displayName: 'Links (External)';
   };
   attributes: {
-    link: Schema.Attribute.Component<'core.link', true>;
+    externalLinks: Schema.Attribute.Component<'core.external-link', true>;
+  };
+}
+
+export interface CoreLinksInternal extends Struct.ComponentSchema {
+  collectionName: 'components_core_links_internal_s';
+  info: {
+    description: '';
+    displayName: 'Links (Internal)';
+  };
+  attributes: {
+    internalLinks: Schema.Attribute.Component<'core.internal-link', true>;
   };
 }
 
@@ -159,7 +170,8 @@ declare module '@strapi/strapi' {
       'core.image-per-breakpoint': CoreImagePerBreakpoint;
       'core.internal-link': CoreInternalLink;
       'core.link': CoreLink;
-      'single-types.links': SingleTypesLinks;
+      'core.links-external': CoreLinksExternal;
+      'core.links-internal': CoreLinksInternal;
       'widgets.dynamic-hero': WidgetsDynamicHero;
     }
   }

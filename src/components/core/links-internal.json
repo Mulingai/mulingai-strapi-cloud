@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_core_links_internal_s",
+  "info": {
+    "displayName": "Links (Internal)",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "internalLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.internal-link"
+    }
+  }
+}

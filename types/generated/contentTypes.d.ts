@@ -603,7 +603,6 @@ export interface ApiNavigationNavigation extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    link: Schema.Attribute.Component<'core.link', true>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

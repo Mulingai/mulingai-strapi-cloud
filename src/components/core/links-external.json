@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_core_links_external_s",
+  "info": {
+    "displayName": "Links (External)"
+  },
+  "options": {},
+  "attributes": {
+    "externalLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.external-link"
+    }
+  }
+}

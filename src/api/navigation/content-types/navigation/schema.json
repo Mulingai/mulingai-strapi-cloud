@@ -18,11 +18,6 @@
   "attributes": {
     "Title": {
       "type": "string"
-    },
-    "link": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.link"
     }
   }
 }
