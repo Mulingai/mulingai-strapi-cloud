@@ -1,14 +1,15 @@
 {
   "collectionName": "components_core_internal_links",
   "info": {
-    "displayName": "Internal Link"
+    "displayName": "Internal Link",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "label": {
       "type": "string"
     },
-    "shouldOpenInNewTab": {
+    "isNewTab": {
       "type": "boolean",
       "default": false
     },

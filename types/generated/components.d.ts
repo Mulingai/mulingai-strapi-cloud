@@ -71,12 +71,12 @@ export interface ContentLayoutWidgetWrapper extends Struct.ComponentSchema {
 export interface CoreExternalLink extends Struct.ComponentSchema {
   collectionName: 'components_core_external_links';
   info: {
+    description: '';
     displayName: 'External Link';
   };
   attributes: {
+    isNewTab: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     label: Schema.Attribute.String;
-    shouldOpenInNewTab: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<true>;
     url: Schema.Attribute.String;
   };
 }
@@ -100,13 +100,13 @@ export interface CoreImagePerBreakpoint extends Struct.ComponentSchema {
 export interface CoreInternalLink extends Struct.ComponentSchema {
   collectionName: 'components_core_internal_links';
   info: {
+    description: '';
     displayName: 'Internal Link';
   };
   attributes: {
+    isNewTab: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     label: Schema.Attribute.String;
     page: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
-    shouldOpenInNewTab: Schema.Attribute.Boolean &
-      Schema.Attribute.DefaultTo<false>;
   };
 }
 
