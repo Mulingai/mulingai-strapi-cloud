@@ -16,8 +16,17 @@
     }
   },
   "attributes": {
-    "Title": {
-      "type": "string"
+    "internalUrls": {
+      "type": "dynamiczone",
+      "components": [
+        "core.links-internal"
+      ]
+    },
+    "externalUrls": {
+      "type": "dynamiczone",
+      "components": [
+        "core.links-external"
+      ]
     }
   }
 }
