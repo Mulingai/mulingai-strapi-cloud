@@ -85,11 +85,12 @@ export interface CoreExternalLink extends Struct.ComponentSchema {
 export interface CoreExternalLinkType extends Struct.ComponentSchema {
   collectionName: 'components_core_external_link_types';
   info: {
+    description: '';
     displayName: 'External Link Type';
   };
   attributes: {
     externalUrlType: Schema.Attribute.Enumeration<
-      ['Facebook', 'YouTube', 'Instagram']
+      ['Facebook', 'YouTube', 'Instagram', 'X']
     >;
   };
 }
