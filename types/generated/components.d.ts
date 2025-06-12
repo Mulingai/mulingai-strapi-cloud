@@ -170,8 +170,13 @@ export interface CorePageType extends Struct.ComponentSchema {
         'HomePage',
         'MulingstreamListenerHome',
         'MulingstreamListenerLogin',
-        'UserSignIn',
-        'UserSignUp',
+        'AccountDashboard',
+        'AccountSignIn',
+        'AccountSignUp',
+        'MulingstreamSpeakerRoomCreation',
+        'MulingstreamSpeakerRecordingRoom',
+        'NotFoundPage',
+        'CheckoutPage',
       ]
     >;
   };

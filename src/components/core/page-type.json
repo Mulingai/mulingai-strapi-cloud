@@ -12,8 +12,13 @@
         "HomePage",
         "MulingstreamListenerHome",
         "MulingstreamListenerLogin",
-        "UserSignIn",
-        "UserSignUp"
+        "AccountDashboard",
+        "AccountSignIn",
+        "AccountSignUp",
+        "MulingstreamSpeakerRoomCreation",
+        "MulingstreamSpeakerRecordingRoom",
+        "NotFoundPage",
+        "CheckoutPage"
       ]
     }
   }
