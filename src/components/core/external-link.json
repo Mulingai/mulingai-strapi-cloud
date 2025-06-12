@@ -15,6 +15,11 @@
     },
     "url": {
       "type": "string"
+    },
+    "type": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.external-link-type"
     }
   }
 }

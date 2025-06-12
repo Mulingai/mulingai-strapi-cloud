@@ -1,7 +1,8 @@
 {
   "collectionName": "components_core_page_types",
   "info": {
-    "displayName": "Page Type"
+    "displayName": "Page Type",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -9,9 +10,10 @@
       "type": "enumeration",
       "enum": [
         "HomePage",
+        "MulingstreamListenerHome",
+        "MulingstreamListenerLogin",
         "UserSignIn",
-        "UserSignUp",
-        "MulingstreamListenerLogin"
+        "UserSignUp"
       ]
     }
   }

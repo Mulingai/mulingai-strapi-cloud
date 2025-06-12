@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_core_external_link_types",
+  "info": {
+    "displayName": "External Link Type"
+  },
+  "options": {},
+  "attributes": {
+    "externalUrlType": {
+      "type": "enumeration",
+      "enum": [
+        "Facebook",
+        "YouTube",
+        "Instagram"
+      ]
+    }
+  }
+}

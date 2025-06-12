@@ -77,7 +77,20 @@ export interface CoreExternalLink extends Struct.ComponentSchema {
   attributes: {
     isNewTab: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
     label: Schema.Attribute.String;
+    type: Schema.Attribute.Component<'core.external-link-type', false>;
     url: Schema.Attribute.String;
+  };
+}
+
+export interface CoreExternalLinkType extends Struct.ComponentSchema {
+  collectionName: 'components_core_external_link_types';
+  info: {
+    displayName: 'External Link Type';
+  };
+  attributes: {
+    externalUrlType: Schema.Attribute.Enumeration<
+      ['Facebook', 'YouTube', 'Instagram']
+    >;
   };
 }
 
@@ -146,11 +159,18 @@ export interface CoreLinksInternal extends Struct.ComponentSchema {
 export interface CorePageType extends Struct.ComponentSchema {
   collectionName: 'components_core_page_types';
   info: {
+    description: '';
     displayName: 'Page Type';
   };
   attributes: {
     pageType: Schema.Attribute.Enumeration<
-      ['HomePage', 'UserSignIn', 'UserSignUp', 'MulingstreamListenerLogin']
+      [
+        'HomePage',
+        'MulingstreamListenerHome',
+        'MulingstreamListenerLogin',
+        'UserSignIn',
+        'UserSignUp',
+      ]
     >;
   };
 }
@@ -178,6 +198,7 @@ declare module '@strapi/strapi' {
       'content-layout.content-row': ContentLayoutContentRow;
       'content-layout.widget-wrapper': ContentLayoutWidgetWrapper;
       'core.external-link': CoreExternalLink;
+      'core.external-link-type': CoreExternalLinkType;
       'core.image-per-breakpoint': CoreImagePerBreakpoint;
       'core.internal-link': CoreInternalLink;
       'core.link': CoreLink;
