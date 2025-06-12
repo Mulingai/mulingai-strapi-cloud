@@ -1,7 +1,8 @@
 {
   "collectionName": "components_core_external_link_types",
   "info": {
-    "displayName": "External Link Type"
+    "displayName": "External Link Type",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,8 @@
       "enum": [
         "Facebook",
         "YouTube",
-        "Instagram"
+        "Instagram",
+        "X"
       ]
     }
   }
