@@ -119,7 +119,7 @@ export interface CoreInternalLink extends Struct.ComponentSchema {
   };
   attributes: {
     isNewTab: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
-    label: Schema.Attribute.String;
+    label: Schema.Attribute.String & Schema.Attribute.Private;
     page: Schema.Attribute.Relation<'oneToOne', 'api::page.page'>;
   };
 }
