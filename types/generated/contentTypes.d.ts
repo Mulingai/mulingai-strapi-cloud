@@ -592,6 +592,9 @@ export interface ApiPagePage extends Struct.CollectionTypeSchema {
       'content-layout.content-row',
       true
     >;
+    siteContext: Schema.Attribute.Enumeration<['Main', 'Mulingstream']> &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Main'>;
     slug: Schema.Attribute.UID & Schema.Attribute.Required;
     title: Schema.Attribute.String &
       Schema.Attribute.Required &

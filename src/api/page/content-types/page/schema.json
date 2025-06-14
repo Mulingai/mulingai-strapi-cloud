@@ -25,10 +25,26 @@
       },
       "required": true
     },
+    "siteContext": {
+      "type": "enumeration",
+      "enum": ["Main", "Mulingstream"],
+      "default": "Main",
+      "required": true
+    },    
+    "pageType": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.page-type"
+    },    
     "slug": {
       "type": "uid",
       "required": true
     },
+    "backgroundCover": {
+      "type": "component",
+      "repeatable": false,
+      "component": "content-layout.background-cover"
+    },    
     "contentRow": {
       "type": "component",
       "repeatable": true,
@@ -38,16 +54,6 @@
       "type": "component",
       "repeatable": true,
       "component": "content-layout.content-row"
-    },
-    "backgroundCover": {
-      "type": "component",
-      "repeatable": false,
-      "component": "content-layout.background-cover"
-    },
-    "pageType": {
-      "type": "component",
-      "repeatable": false,
-      "component": "core.page-type"
     }
   }
 }
